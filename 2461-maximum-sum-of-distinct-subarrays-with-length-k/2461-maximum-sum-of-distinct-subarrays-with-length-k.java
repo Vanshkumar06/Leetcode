@@ -15,7 +15,7 @@ class Solution {
             window += nums[right];
             map.put(nums[right], map.getOrDefault(nums[right], 0) + 1);
 
-            // Shrink window if size > k
+           
             if (right - left + 1 > k) {
                 window -= nums[left];
 
@@ -28,7 +28,7 @@ class Solution {
                 left++;
             }
 
-            // Check if window is valid
+            
             if (right - left + 1 == k && map.size() == k) {
                 maxSum = Math.max(maxSum, window);
             }
